@@ -1,14 +1,15 @@
 package com.ctk.controller;
 
-import com.ctk.InfoBean;
+
+import com.ctk.JsonCallback;
 import com.ctk.service.InfoService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 /**
  * Created by tck on 2017/10/30.
@@ -18,10 +19,19 @@ public class InfoServiceController {
     @Autowired
     private InfoService infoService;
 
-    @RequestMapping("/getAllInfo")
-    public List<InfoBean> getAllInfo() {
 
-        return infoService.getAllInfo();
+    @RequestMapping("/getAllInfo")
+    public String getAllInfo() {
+        String str = "";
+        JsonCallback jsonCallback = new JsonCallback();
+        jsonCallback.setmDataList(infoService.getAllInfo());
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            str = objectMapper.writeValueAsString(jsonCallback);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return "success_jsonpCallback(" + str + ")";
     }
 
     @RequestMapping("/addInfo")
