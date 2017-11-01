@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+    <title>关于大学生上网玩游戏的调研报告</title>
+</head>
+
+<body>
+    <h1 class="text-center">关于大学生上网玩游戏的调研报告</h1>
+    <div style="margin:20px">
+        <label>1.您的性别？</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="radio" name="sex" value="男生" checked="checked">男生</li>
+            <li class="list-group-item">
+                <input type="radio" name="sex" value="女生">女生</li>
+        </ul>
+    </div>
+
+    <div style="margin:20px">
+        <label>2.您现在处于的年级？</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="radio" name="grade" value="大一" checked="checked">大一</li>
+            <li class="list-group-item">
+                <input type="radio" name="grade" value="大二">大二</li>
+            <li class="list-group-item">
+                <input type="radio" name="grade" value="大三">大三</li>
+            <li class="list-group-item">
+                <input type="radio" name="grade" value="大四">大四</li>
+            <li class="list-group-item">
+                <input type="radio" name="grade" value="研究生">研究生</li>
+        </ul>
+    </div>
+
+    <div style="margin:20px" class="form-group">
+        <label>3.您的专业？</label>
+        <input style="margin-top:20px" class="form-control" type="text" name="major">
+    </div>
+
+    <div style="margin:20px">
+        <label>4.您玩游戏吗？</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="radio" name="playGame" value="经常玩" checked="checked">经常玩</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGame" value="偶尔玩">偶尔玩</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGame" value="不玩">不玩</li>
+        </ul>
+    </div>
+
+    <div style="margin:20px" class="form-group">
+        <label>5.您经常玩的游戏是什么？</label>
+        <input style="margin-top:20px" class="form-control" type="text" name="playGameName">
+    </div>
+
+    <div style="margin:20px" class="form-group">
+        <label>6.您玩游戏一般多长时间？</label>
+        <input style="margin-top:20px" class="form-control" type="text" name="playGameTime">
+    </div>
+
+    <div style="margin:20px">
+        <label>7.您觉得玩游戏对学习方面有什么利弊？（多选题）</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameAdvantages" value="舒缓压力" checked="checked">舒缓压力</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameAdvantages" value="打发时间 ">打发时间 </li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameAdvantages" value="可以开发智力">可以开发智力</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameAdvantages" value="生活节奏被打乱">生活节奏被打乱</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameAdvantages" value="精神无法集中，荒废学业">精神无法集中，荒废学业</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameAdvantages" value="其他">其他</li>
+        </ul>
+    </div>
+
+    <div style="margin:20px">
+        <label>8.玩游戏会占用学习时间，影响兴趣爱好等，你认为值得吗？</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="radio" name="playGameWorth" value="值得" checked="checked">值得</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGameWorth" value="不值得">不值得</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGameWorth" value="看自己时间安排">看自己时间安排</li>
+        </ul>
+    </div>
+
+    <div style="margin:20px">
+        <label>9.您一般在哪种地方玩游戏？</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="radio" name="playGameLocation" value="教室" checked="checked">教室</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGameLocation" value="寝室">寝室</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGameLocation" value="网吧">网吧</li>
+            <li class="list-group-item">
+                <input type="radio" name="playGameLocation" value="其他">其他</li>
+        </ul>
+    </div>
+
+    <div style="margin:20px">
+        <label>10.您为什么玩游戏？（多选题）</label>
+        <ul class="list-group" style="margin-top:20px">
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="上课无聊，对老师讲的不感兴趣" checked="checked">上课无聊，对老师讲的不感兴趣</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="缓解压力">缓解压力</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="随众心理">随众心理</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="大学生活枯燥">大学生活枯燥</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="自制力差">自制力差</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="纯粹娱乐，打发时间">纯粹娱乐，打发时间</li>
+            <li class="list-group-item">
+                <input type="checkbox" name="playGameReason" value="对游戏自身的热爱">对游戏自身的热爱</li>
+        </ul>
+    </div>
+
+    <center>
+        <button style="margin-bottom:20px" class="btn btn-primary" type="button" id="btn1">提交</button>
+    </center>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                var sex = $('input:radio[name="sex"]:checked').val();
+                var grade = $('input:radio[name="grade"]:checked').val();
+                var major = $('input:text[name="major"]').val();
+                var playGame = $('input:radio[name="playGame"]:checked').val();
+                var playGameName = $('input:text[name="playGameName"]').val();
+                var playGameTime = $('input:text[name="playGameTime"]').val();
+                var playGameAdvantages = $('input:checkbox[name=playGameAdvantages]:checked').map(
+                    function () {
+                        return $(this).val();
+                    }).get().join(",");
+                var playGameWorth = $('input:radio[name="playGameWorth"]:checked').val();
+                var playGameLocation = $('input:radio[name="playGameLocation"]:checked').val();
+
+                var playGameReason = $('input:checkbox[name=playGameReason]:checked').map(function () {
+                    return $(this).val();
+                }).get().join(",");
+
+                $.ajax({
+                    url: "http://139.224.233.137:8080/study/addInfo?sex=" + sex + "&grade=" + grade +
+                        "&major=" + major + "&playGame=" + playGame + "&playGameName=" +
+                        playGameName + "&playGameTime=" + playGameTime + "&playGameAdvantages=" +
+                        playGameAdvantages + "&playGameWorth=" + playGameWorth +
+                        "&playGameLocation=" + playGameLocation + "&playGameReason=" +
+                        playGameReason,
+                    dataType: "jsonp",
+                    method: "get",
+                    success: function (data) {
+                        alert("成功");
+                    },
+                    error: function (data) {
+                        alert("失败");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
