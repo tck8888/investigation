@@ -1,4 +1,4 @@
-package com.ctk;
+package com.ctk.entity;
 
 /**
  * Created by tck on 2017/10/30.

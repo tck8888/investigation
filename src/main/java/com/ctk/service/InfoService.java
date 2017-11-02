@@ -1,7 +1,8 @@
 package com.ctk.service;
 
-import com.ctk.InfoBean;
+import com.ctk.entity.InfoBean;
 
+import javax.print.DocFlavor;
 import java.util.List;
 
 /**
@@ -9,9 +10,9 @@ import java.util.List;
  */
 public interface InfoService {
 
-    List<InfoBean> getAllInfo();
+    String getAllInfo();
 
-    Boolean addInfo(String sex,
+    String addInfo(String sex,
                     String grade,
                     String major,
                     String playGame,

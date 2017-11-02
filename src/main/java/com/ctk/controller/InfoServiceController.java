@@ -1,12 +1,7 @@
 package com.ctk.controller;
 
-
-import com.ctk.JsonCallback;
 import com.ctk.service.InfoService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,35 +12,34 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class InfoServiceController {
+
     @Autowired
     private InfoService infoService;
 
     @RequestMapping("/getAllInfo")
     public String getAllInfo() {
-        String str = "";
-        JsonCallback jsonCallback = new JsonCallback();
-        jsonCallback.setmDataList(infoService.getAllInfo());
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            str = objectMapper.writeValueAsString(jsonCallback);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return "success_jsonpCallback(" + str + ")";
+
+        return "success_jsonpCallback(" + infoService.getAllInfo() + ")";
+    }
+
+    @RequestMapping("/app/getAllInfo")
+    public String getAllInfo1() {
+
+        return infoService.getAllInfo();
     }
 
     @RequestMapping("/addInfo")
-    public void addInfo(@RequestParam("sex") String sex,
-                        @RequestParam("grade") String grade,
-                        @RequestParam("major") String major,
-                        @RequestParam("playGame") String playGame,
-                        @RequestParam("playGameName") String playGameName,
-                        @RequestParam("playGameTime") String playGameTime,
-                        @RequestParam("playGameAdvantages") String playGameAdvantages,
-                        @RequestParam("playGameWorth") String playGameWorth,
-                        @RequestParam("playGameLocation") String playGameLocation,
-                        @RequestParam("playGameReason") String playGameReason) {
-        infoService.addInfo(sex,
+    public String addInfo(@RequestParam("sex") String sex,
+                          @RequestParam("grade") String grade,
+                          @RequestParam("major") String major,
+                          @RequestParam("playGame") String playGame,
+                          @RequestParam("playGameName") String playGameName,
+                          @RequestParam("playGameTime") String playGameTime,
+                          @RequestParam("playGameAdvantages") String playGameAdvantages,
+                          @RequestParam("playGameWorth") String playGameWorth,
+                          @RequestParam("playGameLocation") String playGameLocation,
+                          @RequestParam("playGameReason") String playGameReason) {
+        String addInfo = infoService.addInfo(sex,
                 grade,
                 major,
                 playGame,
@@ -55,5 +49,32 @@ public class InfoServiceController {
                 playGameWorth,
                 playGameLocation,
                 playGameReason);
+
+        return "success_jsonpCallback(" + addInfo + ")";
+    }
+
+    @RequestMapping("/app/addInfo")
+    public String addInfo1(@RequestParam("sex") String sex,
+                           @RequestParam("grade") String grade,
+                           @RequestParam("major") String major,
+                           @RequestParam("playGame") String playGame,
+                           @RequestParam("playGameName") String playGameName,
+                           @RequestParam("playGameTime") String playGameTime,
+                           @RequestParam("playGameAdvantages") String playGameAdvantages,
+                           @RequestParam("playGameWorth") String playGameWorth,
+                           @RequestParam("playGameLocation") String playGameLocation,
+                           @RequestParam("playGameReason") String playGameReason) {
+        String addInfo = infoService.addInfo(sex,
+                grade,
+                major,
+                playGame,
+                playGameName,
+                playGameTime,
+                playGameAdvantages,
+                playGameWorth,
+                playGameLocation,
+                playGameReason);
+
+        return "success_jsonpCallback(" + addInfo + ")";
     }
 }

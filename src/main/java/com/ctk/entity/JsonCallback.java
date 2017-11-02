@@ -1,4 +1,6 @@
-package com.ctk;
+package com.ctk.entity;
+
+import com.ctk.entity.InfoBean;
 
 import java.util.List;
 

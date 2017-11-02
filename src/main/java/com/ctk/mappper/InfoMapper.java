@@ -1,9 +1,8 @@
 package com.ctk.mappper;
 
-import com.ctk.InfoBean;
+import com.ctk.entity.InfoBean;
 import org.apache.ibatis.annotations.*;
 
-import javax.sound.sampled.Line;
 import java.util.List;
 
 /**
